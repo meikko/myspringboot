@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.fjh.myspringboot.mapper.TestMapper">
+
+    <resultMap id="listResult" type="com.fjh.myspringboot.entity.TestList">
+        <id column="userid" property="userid" />
+        <result column="loginname" property="loginname" />
+        <result column="password" property="loginname" />
+        <result column="logindate" property="logindate" />
+        <result column="name" property="name" />
+        <result column="loginip" property="loginip" />
+        <result column="departmentid" property="departmentid" />
+        <result column="logincount" property="logincount" />
+        <result column="failcount" property="failcount" />
+        <result column="status" property="status" />
+        <result column="usertype" property="usertype" />
+        <result column="createtime" property="createtime" />
+        <result column="organid" property="organid" />
+        <result column="styletype" property="styletype" />
+        <result column="allotorgan" property="allotorgan" />
+        <result column="mobile" property="mobile" />
+        <result column="email" property="email" />
+        <result column="sensitiveright" property="sensitiveright" />
+    </resultMap>
+
+    <select id="list" resultMap="listResult">
+        select * from sys_user
+    </select>
+</mapper>
