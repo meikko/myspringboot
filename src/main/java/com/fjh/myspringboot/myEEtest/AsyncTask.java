@@ -1,26 +1,21 @@
 package com.fjh.myspringboot.myEEtest;
 
 import org.springframework.scheduling.annotation.Async;
-import org.springframework.stereotype.Service;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.stereotype.Component;
 
-@Service
+
+@EnableAsync
+@Component
 public class AsyncTask {
 
     @Async
-    public void waitTask() {
-        System.out.println("waitTask【开始】执行了");
-        try{
-            Thread.sleep(3000);
-        } catch (Exception ignored){
+    public void waitThread() {
+        try {
+            Thread.sleep(1000*3);
+        } catch (Exception ignored) {
 
         }
-        System.out.println("waitTask【结束】执行了");
+        System.out.println("wait-end");
     }
-
-
-
-
-
 }
-
-

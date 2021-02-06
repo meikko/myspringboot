@@ -15,7 +15,7 @@ import java.util.Date;
 
 
 @Configuration      // 1.主要用于标记配置类，兼备Component的效果。
-@EnableScheduling   // 2.开启定时任务
+// @EnableScheduling   // 2.开启定时任务，写在启动类中
 public class ScheduleTask implements SchedulingConfigurer {
 
     @Value("${schedulertask.enable}")
